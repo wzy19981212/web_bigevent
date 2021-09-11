@@ -1,10 +1,45 @@
 $(function () {
+    $('#bir').on('click', function () {
+        function countTime(time) {
+            var nowTime = +new Date();//当前时间戳、
+            var inpputTime = +new Date(time);//用户输入
+            var times = (inpputTime - nowTime) / 1000;
+            var d = parseInt(times / 60 / 60 / 24);
+            d = d < 10 ? '0' + d : d;
+            var h = parseInt(times / 60 / 60 % 24);
+            h = h < 10 ? '0' + h : h;
+            var m = parseInt(times / 60 % 60);
+            m = m < 10 ? '0' + m : m;
+            var s = parseInt(times % 60);
+            s = s < 10 ? '0' + s : s;
+            return d + '天'
+        }
+        alert(countTime('2021-12-27 00:00:00'));
+    })
+    $('#love').on('click', function () {
+        function countTime(time) {
+            var nowTime = +new Date();//当前时间戳、
+            var inpputTime = +new Date(time);//用户输入
+            var times = (nowTime - inpputTime) / 1000;
+            var d = parseInt(times / 60 / 60 / 24);
+            d = d < 10 ? '0' + d : d;
+            var h = parseInt(times / 60 / 60 % 24);
+            h = h < 10 ? '0' + h : h;
+            var m = parseInt(times / 60 % 60);
+            m = m < 10 ? '0' + m : m;
+            var s = parseInt(times % 60);
+            s = s < 10 ? '0' + s : s;
+            return d + '天'
+        }
+        alert(countTime('2019-11-9 00:00:00'));
+    })
+
     getUserinfo();
     var layer = layui.layer
 
     //点击按钮实现退出
     $('#btnLogout').on('click', function () {
-        layer.confirm('确认退出?', { icon: 3, title: '提示' }, function (index) {
+        layer.confirm('爱你，欢迎再次使用', { icon: 3, title: '提示' }, function (index) {
             //do something
             //清空token
             localStorage.removeItem('token')
@@ -64,4 +99,6 @@ function renderAvatar(user) {
         $('.text-avatar').html(first).show()
     }
 
+
 }
+

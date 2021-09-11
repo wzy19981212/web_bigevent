@@ -15,11 +15,14 @@
 <body>
     <div class="layui-layout layui-layout-admin">
         <div class="layui-header">
+
             <div class="layui-logo layui-hide-xs layui-bg-black"><img src="/assets/images/logo.png" width="150"
                     height="50" alt=""></div>
             <!-- 头部区域（可配合layui 已有的水平导航） -->
             <ul class="layui-nav layui-layout-right">
+
                 <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+
                     <a href="javascript:;" class="userinfo">
                         <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg"
                             class="layui-nav-img">
@@ -35,7 +38,9 @@
                 <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
                     <a href="javascript:;" id="btnLogout">
                         <span class="iconfont icon-tuichu">退出 </span>
+
                     </a>
+
                 </li>
             </ul>
         </div>
@@ -71,14 +76,17 @@
                     </li>
                     <li class="layui-nav-item"><a href="javascript:;"><span class="iconfont icon-user"></span> 个人中心</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;">基本资料</a></dd>
+                            <dd><a href="/user/user_info.html" target="fm">基本资料</a></dd>
                             <dd><a href="javascript:;">更换头像</a></dd>
                             <dd><a href="javascript:;">更换密码</a></dd>
+
 
                         </dl>
                     </li>
 
+
                 </ul>
+                <audio src="/assets/images/222.mp4.flac" controls="controls" id="music" autoplay="autoplay"></audio>
             </div>
         </div>
 
@@ -89,7 +97,8 @@
 
         <div class="layui-footer">
             <!-- 底部固定区域 -->
-            欢迎李雅婷大美女！
+            欢迎李雅婷大美女！<a href="" id="bir">距离李雅婷生日还有（点击）</a>
+            <a href="" id="love">我们已经在一起多少天？（点击）</a>
         </div>
     </div>
     <!--  导入layui js文件 -->
@@ -99,6 +108,9 @@
     <script src="/assets/lib/jquery.js"></script>
     <script src="/assets/js/index.js"></script>
     <!-- <script src="/assets/js/baseSapi.js"></script> -->
+    <script>
+        layer.msg('欢迎美丽善良动人可爱的李雅婷,（大墩儿专用网页）');
+    </script>
 
 </body>
 
